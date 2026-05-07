@@ -9,7 +9,7 @@ and this project adheres to Semantic Versioning.
 
 ### Changed
 
-- Renamed package from vitest-dynalite to @vitest/dynalite.
+- Renamed package from vitest-dynalite to vitest4dynalite.
 
 ### Added
 

@@ -1,4 +1,4 @@
-# @vitest/dynalite
+# vitest4dynalite
 
 Vitest-first Dynalite integration with parity goals for jest-dynalite.
 
@@ -14,7 +14,7 @@ Vitest-first Dynalite integration with parity goals for jest-dynalite.
 ## Install
 
 ```bash
-pnpm add -D @vitest/dynalite vitest
+pnpm add -D vitest4dynalite vitest
 pnpm add @aws-sdk/client-dynamodb
 ```
 
@@ -28,14 +28,14 @@ pnpm add aws-sdk
 Equivalent commands:
 
 ```bash
-npm i -D @vitest/dynalite vitest
+npm i -D vitest4dynalite vitest
 npm i @aws-sdk/client-dynamodb
 npm i -D msw
 npm i aws-sdk
 ```
 
 ```bash
-yarn add -D @vitest/dynalite vitest
+yarn add -D vitest4dynalite vitest
 yarn add @aws-sdk/client-dynamodb
 yarn add -D msw
 yarn add aws-sdk
@@ -46,7 +46,7 @@ yarn add aws-sdk
 Create `vitest-dynalite.config.js`:
 
 ```js
-/** @type {import('@vitest/dynalite').DynaliteConfigFile} */
+/** @type {import('vitest4dynalite').DynaliteConfigFile} */
 export default {
   tables: [
     {
@@ -64,7 +64,7 @@ Update `vitest.config.ts`:
 
 ```ts
 import { defineConfig } from "vitest/config";
-import { withDynalite } from "@vitest/dynalite";
+import { withDynalite } from "vitest4dynalite";
 
 export default withDynalite(
   defineConfig({
@@ -118,7 +118,7 @@ import {
   stopDb,
   createTables,
   deleteTables
-} from "@vitest/dynalite";
+} from "vitest4dynalite";
 
 setup(process.cwd());
 
@@ -138,7 +138,7 @@ afterAll(async () => {
 Add to a suite that should self-manage lifecycle:
 
 ```ts
-import "@vitest/dynalite/withDb";
+import "vitest4dynalite/withDb";
 ```
 
 ## Optional MSW Integration
