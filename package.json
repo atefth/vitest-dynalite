@@ -1,0 +1,81 @@
+{
+  "name": "vitest-dynalite",
+  "version": "0.1.0",
+  "description": "Vitest-first Dynalite test integration with Jest-Dynalite parity goals",
+  "packageManager": "pnpm@10.26.1",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./withDb": {
+      "types": "./dist/withDb.d.ts",
+      "import": "./dist/withDb.js"
+    },
+    "./environment": {
+      "types": "./dist/environment.d.ts",
+      "import": "./dist/environment.js"
+    },
+    "./setup": {
+      "types": "./dist/setup.d.ts",
+      "import": "./dist/setup.js"
+    },
+    "./msw": {
+      "types": "./dist/msw.d.ts",
+      "import": "./dist/msw.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "pnpm check && pnpm test && pnpm build"
+  },
+  "keywords": [
+    "vitest",
+    "dynalite",
+    "dynamodb",
+    "testing"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=10"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.912.0",
+    "@aws-sdk/util-dynamodb": "^3.912.0",
+    "dynalite": "^4.0.0",
+    "get-port": "^7.2.0"
+  },
+  "peerDependencies": {
+    "aws-sdk": "^2.1692.0",
+    "msw": "^2.11.6",
+    "vitest": "^3.2.4"
+  },
+  "peerDependenciesMeta": {
+    "aws-sdk": {
+      "optional": true
+    },
+    "msw": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
