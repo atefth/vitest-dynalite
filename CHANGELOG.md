@@ -7,12 +7,18 @@ and this project adheres to Semantic Versioning.
 
 ## [Unreleased]
 
+### Changed
+
+- Renamed package from vitest-dynalite to @vitest/dynalite.
+
 ### Added
+
 - Initial publish-ready package scaffolding.
 
 ## [0.1.0] - 2026-05-07
 
-### Added
+### Added in 0.1.0
+
 - Vitest plugin entrypoint with per-worker dynalite lifecycle.
 - Manual lifecycle helpers and withDb side-effect helper.
 - Config discovery with vitest-dynalite and jest-dynalite file name support.

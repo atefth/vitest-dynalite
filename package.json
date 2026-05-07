@@ -1,5 +1,5 @@
 {
-  "name": "vitest-dynalite",
+  "name": "@vitest/dynalite",
   "version": "0.1.0",
   "description": "Vitest-first Dynalite test integration with Jest-Dynalite parity goals",
   "packageManager": "pnpm@10.26.1",
