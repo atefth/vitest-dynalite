@@ -159,7 +159,13 @@ describe.sequential("config loading and public API behavior", () => {
 
     const setupFiles = second.test?.setupFiles as string[];
     expect(setupFiles).toContain("./existing-setup.ts");
-    expect(setupFiles.filter((value) => value.endsWith("runtime/setup-file.js"))).toHaveLength(1);
+    expect(
+      setupFiles.filter(
+        (value) =>
+          value.endsWith("runtime/setup-file.js") ||
+          value.endsWith("runtime\\setup-file.js")
+      )
+    ).toHaveLength(1);
 
     expect(getRuntimeOptions()).toMatchObject({
       msw: {
