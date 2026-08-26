@@ -1,0 +1,5 @@
+onlyBuiltDependencies:
+  - aws-sdk
+  - classic-level
+  - esbuild
+  - msw

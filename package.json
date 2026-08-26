@@ -1,6 +1,6 @@
 {
   "name": "vitest4dynalite",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Vitest-first Dynalite test integration with Jest-Dynalite parity goals",
   "packageManager": "pnpm@10.26.1",
   "type": "module",
@@ -62,7 +62,7 @@
   "peerDependencies": {
     "aws-sdk": "^2.1692.0",
     "msw": "^2.11.6",
-    "vitest": "^3.2.4"
+    "vitest": "^4.1.11"
   },
   "peerDependenciesMeta": {
     "aws-sdk": {
@@ -75,6 +75,6 @@
   "devDependencies": {
     "@types/node": "^24.10.1",
     "typescript": "^5.9.3",
-    "vitest": "^3.2.4"
+    "vitest": "^4.1.11"
   }
 }
